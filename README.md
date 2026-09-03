@@ -11,4 +11,5 @@ ISSM (Ice-sheet and Sea-level System Model) scripts and setup guides used in the
 - **[scripts_ismip/](scripts_ismip/)** — scripts run on `ismip` (not populated yet)
 - **[functions/](functions/)** — shared helper functions the scripts import
 
-Input data isn't included in this repo — see the note at the top of [scripts_icelab/README.md](scripts_icelab/README.md).
+## Resources
+ISSM github:https://github.com/ISSMteam/ISSM?CFID=3cb55ed6-3e43-4c98-b079-ed4196cbfcf5&CFTOKEN=0
