@@ -8,7 +8,7 @@ ISSM (Ice-sheet and Sea-level System Model) scripts and setup guides used in the
 ## Code
 
 - **[scripts_icelab/](scripts_icelab/)** — the icelab simulation pipeline (setup, relaxation, forward run) — see [scripts_icelab/README.md](scripts_icelab/README.md) for the workflow
-- **[scripts_ismip/](scripts_ismip/)** — scripts run on `ismip` (not populated yet)
+- **[scripts_ismip/](scripts_ismip/)** — scripts run on `ismip` 
 - **[functions/](functions/)** — shared helper functions the scripts import
 
 ## Resources
