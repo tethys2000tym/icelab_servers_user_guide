@@ -1,4 +1,4 @@
-ISSM (Ice-sheet and Sea-level System Model) scripts and setup guides used in the Dr.Nowicki Ice Lab, for running ISSM simulations on the lab's servers, created by Yanmei Tian.
+ISSM (Ice-sheet and Sea-level System Model) scripts and setup guides used in the Dr.Nowicki Ice Lab, for running ISSM simulations on the lab's servers, created by Yanmei Tian， just for reference.
 
 ## Server guides
 
