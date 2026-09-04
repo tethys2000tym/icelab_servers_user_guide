@@ -1,4 +1,4 @@
-Are you ready to run ISSM on icelab? Let's set up the environment!
+Are you ready to run ISSM on icelab? Let's set up the environment! Detailed tutorial is in UB Box: https://buffalo.box.com/s/0jbmm0cu86hfbab5hzrl9tkx4avs0ugc
 
 Running on a different lab server? See [ISMIP_SERVER.md](ISMIP_SERVER.md) for the `ismip` setup guide.
 
