@@ -117,10 +117,9 @@ if not hasattr(np, 'in1d'):
     np.in1d = np.isin
 ```
 
-Insert your own helper modules (e.g. a custom `generic` or `export_netCDF`) at the front with `sys.path.insert(0, ...)` so they shadow ISSM's built-in versions.
 
 > [!WARNING]
-> The ISSM 4.24 build on this server is missing a few internal modules (`generic_static`, `contourlevelzero`, `isoline`) — not something your own script imports, but something `solve.py`/`reinitializelevelset.py` need internally. Shows up as `ModuleNotFoundError: No module named 'generic_static'` or similar. You don't have to fix this problem, the copies already live in `~/Functions/`, just copy them over and add that path to the front of `sys.path` (see my script).
+> The ISSM 4.24 build on this server is missing a few internal modules (`generic_static`, `contourlevelzero`, `isoline`) — not something your own script imports, but something `solve.py`/`reinitializelevelset.py` need internally. Shows up as `ModuleNotFoundError: No module named 'generic_static'` or similar. You don't have to fix this problem, the copies already live in `~/Functions/`, just copy them over and add that path to the front of `sys.path` (see how my scripts work).
 
 ### 3. Configure the local cluster
 
