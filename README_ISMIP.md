@@ -68,6 +68,9 @@ Add this to `~/.bashrc` (right after the conda-init block) and it's set for good
 
 ```bash
 echo 'export PATH="$ISSM_DIR/bin:$PATH"' >> ~/.bashrc
+```
+
+```bash
 source ~/.bashrc
 conda activate issm_py311
 ```
