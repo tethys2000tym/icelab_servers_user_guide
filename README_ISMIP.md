@@ -1,6 +1,6 @@
-# ISSM Runbook — ismip server
+# ISSM Runbook — ismip server (ismip.caset.buffalo.edu)
 
-Operations guide for the lab's server, `ismip`. This reflects what actually works on this machine for me, not a generic tutorial.
+This reflects what actually works on this machine for me, not a generic tutorial.
 
 | | |
 |---|---|
