@@ -28,7 +28,7 @@ icelab (`icelab.caset.buffalo.edu`) is a dedicated Linux server hosted by CASET 
 | `scripts_icelab/` (this repo) | The pipeline scripts (`S0`–`S5`) and workflow notebooks |
 | `functions/` (this repo) | Shared helper functions the scripts import (SMB parameterizations, level-set reinitialization, NetCDF export, CFL step, etc.) — a copy of the lab's `issm/Functions/` directory |
 
-### 3. Setting up ISSM — Python
+### 3. Setting up ISSM — Python (Start from here!😄)
 
 ISSM is pre-installed on icelab. To use it from Python, create a conda environment and point Python at the ISSM directories.
 
