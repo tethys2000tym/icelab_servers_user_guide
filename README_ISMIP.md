@@ -38,10 +38,12 @@ source ~/.bashrc
 Set `~/.condarc` to strict conda-forge priority — mixing in the defaults channel invites ABI conflicts:
 
 ```yaml
+cat > ~/.condarc << 'EOF'
 channels:
   - conda-forge
   - defaults
 channel_priority: strict
+EOF
 ```
 
 ### 3. Create a dedicated ISSM environment
@@ -51,7 +53,9 @@ Python 3.11 plus the usual scientific stack, matching the `issm_py311` env alrea
 ```bash
 conda create -n issm_py311 python=3.11 \
     numpy scipy netCDF4 xarray h5py pandas matplotlib cftime dask \
-    -c conda-forge
+    -c conda-forge -y
+
+source "$(conda info --base)/etc/profile.d/conda.sh"   # make sure is activated
 conda activate issm_py311
 ```
 
@@ -63,7 +67,9 @@ conda activate issm_py311
 Add this to `~/.bashrc` (right after the conda-init block) and it's set for good:
 
 ```bash
-export PATH="$ISSM_DIR/bin:$PATH"
+echo 'export PATH="$ISSM_DIR/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+conda activate issm_py311
 ```
 
 ### 5. Verify
