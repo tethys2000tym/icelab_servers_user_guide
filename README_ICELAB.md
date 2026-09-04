@@ -1,4 +1,4 @@
-Here are some ISSM simulation scripts on icelab that Yanmei is using now.
+Are you ready for running ISSM on icelab? Let's set up the environment!
 
 Running on a different lab server? See [ISMIP_SERVER.md](ISMIP_SERVER.md) for the `ismip` setup guide.
 
