@@ -10,7 +10,7 @@ This reflects what actually works on this machine for me, not a generic tutorial
 | **Memory** | 251 GB |
 
 > [!NOTE]
-> **ISSM itself doesn't need installing.** It's a pre-built system installed at `/opt/ISSM-Linux-Python-3`. Part A below helps set up a Python environment that fits this ISSM module. (The base Python environment on ismip is 3.13. You need to create a Python 3.11 environment to fit the ISSM module.)
+> **ISSM itself doesn't need installing.** It's a pre-built system installed at `/opt/ISSM-Linux-Python-3`. Part A below helps set up a Python environment that fits this ISSM module. (The base Python environment on ismip is 3.13, the python enviroment of ismip server ISSM is 3.11. So you need to create a Python 3.11 environment to fit the ISSM module.)
 
 
 ## Part A — One-time environment setup
