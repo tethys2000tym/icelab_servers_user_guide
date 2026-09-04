@@ -129,4 +129,4 @@ For further server issues (accounts, hardware, software), open a ticket with CAS
 
 - ISSM documentation: https://issm.jpl.nasa.gov/documentation/
 - ISSM tutorials: https://issm.jpl.nasa.gov/documentation/tutorials/
-- UBBOX resources: https://www.caset.buffalo.edu/
+- UB Caset ticket: https://www.caset.buffalo.edu/
