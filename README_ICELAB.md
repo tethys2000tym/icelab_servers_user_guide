@@ -1,4 +1,4 @@
-Are you ready for running ISSM on icelab? Let's set up the environment!
+Are you ready to run ISSM on icelab? Let's set up the environment!
 
 Running on a different lab server? See [ISMIP_SERVER.md](ISMIP_SERVER.md) for the `ismip` setup guide.
 
