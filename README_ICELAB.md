@@ -6,7 +6,7 @@ Running on a different lab server? See [ISMIP_SERVER.md](ISMIP_SERVER.md) for th
 
 ### 1. Access
 
-icelab (`icelab.caset.buffalo.edu`) is a dedicated Linux server hosted by CASET for the Nowicki Ice Lab. Unlike a shared cluster, there's no job scheduler — you run jobs directly in your shell.
+icelab server (`icelab.caset.buffalo.edu`) is a dedicated Linux server hosted by CASET for our icelab. Unlike a shared cluster, there's no job scheduler — you run jobs directly in your shell.
 
 - Accounts are provisioned by CASET — ask a current lab member to have you added.
 - icelab is only reachable from the UB network. Off campus, connect to the UB VPN first (Cisco AnyConnect, `vpn.buffalo.edu`).
@@ -43,7 +43,7 @@ conda activate /data/envs/my-issm
 python
 ```
 
-Inside Python:
+Inside Python Script:
 
 ```python
 import os, sys
@@ -55,9 +55,9 @@ sys.path.append(os.getenv('ISSM_DIR') + '/share/proj')
 
 (The scripts in this repo already include these `sys.path.append(...)` lines at the top — just make sure `ISSM_DIR` is set in your environment and that any lab-specific paths, e.g. `/home/yanmeiti/issm/Functions/`, are updated to your own account/path.)
 
-The scripts also import shared helper functions that live in `functions/` in this repo. On icelab you can keep using the original `sys.path.append("/home/yanmeiti/issm/Functions/")`, or point `sys.path` at your own copy of `functions/` from this repo.
+The scripts also import shared helper functions that live in `functions/` in this repo. On icelab you can point `sys.path` at your own copy of `functions/` from this repo, see the shared python scripts.
 
-### 4. Setting up ISSM — MATLAB (needs a graphical session via VNC, not a good choice to me😢)
+### 4. Setting up ISSM — MATLAB (needs a graphical session via VNC, not a good choice to me, which crashed a lot of time😢 So I am using the python-version ISSM)
 
 ```bash
 # on icelab, in a VNC desktop terminal
@@ -88,26 +88,26 @@ ssh -L5904:localhost:5904 your_username@icelab.caset.buffalo.edu
 
 Port must be 5901 or higher; display number = port − 5900. Stop the server with `vncserver -kill :4`.
 
-### 5. Running long jobs
+### 5. Running long jobs ?
 
 Forward simulations can run for days. Always start them as background sessions — otherwise a dropped SSH connection kills the process.
 
 **tmux (recommended):**
 
 ```bash
-tmux new -s issm-run
-conda activate /data/envs/my-issm
-python scripts_icelab/S3_forward_1850-2500_v3_new.py
+tmux new -s issm-run     #open a tmux session
+conda activate /data/envs/my-issm      #activate your issm
+python scripts_icelab/S3_forward_1850-2500_v3_new.py      #submit your issm scripts!
 # detach with Ctrl+B then D — the job keeps running
 # later, from anywhere:
-tmux attach -t issm-run
+tmux attach -t issm-run  #check your tmux window
 ```
 
 **or nohup:**
 
 ```bash
-nohup python scripts_icelab/S3_forward_1850-2500_v3_new.py > run.log 2>&1 &
-tail -f run.log
+nohup python scripts_icelab/S3_forward_1850-2500_v3_new.py > run.log 2>&1 &.        #submit your script by nohup
+tail -f run.log.        #check your script progress
 ```
 
 It's a good idea to test on a short time segment before committing to a full multi-century run.
